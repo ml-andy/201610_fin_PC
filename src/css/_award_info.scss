@@ -12,59 +12,61 @@
                     //width:478
                     .st1{
                         @include r;
-                        height: getVW(61);
+                        height: 54px;
                         background-image: url(../images/inquire_st1.png);
                         background-repeat: no-repeat;
                         background-size: contain;
                         background-position: center center;
-                        margin-bottom: getVW(20);
+                        margin-bottom: 30px;
+                        z-index: 1;
                     }
                     .st2{
                         @include r;
-                        height: getVW(61);
+                        height: 54px;
                         background-image: url(../images/inquire_st2.png);
                         background-repeat: no-repeat;
                         background-size: contain;
                         background-position: center center;
-                        margin-bottom: getVW(20);
-                        margin-top: getVW(45);
-                    }
-                    .prize1{
-                        @include r;
-                        height: getVW(161);
-                        background-image: url(../images/award_info_prize1.png);
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                        background-position: center center;
-                        margin-bottom: getVW(10);
+                        margin-bottom: 25px;
+                        margin-top: 15px;
+                        z-index: 1;
                     }
                     .word{
                         @include r;
-                        @include fontvw(25,32,#414141);
+                        @include font(17px,24px,#414141);
+                        z-index: 1;
                         .red{
-                            color: #de1818;
-                            font-weight: bolder;
+                            @include font(24px,30px,#de1818,bolder);
+                            &.martop{
+                                margin-top: 25px;
+                            }
                         }
                         .s{
                             @include r;
-                            @include fontvw(18,24,#b00a0a);
+                            @include font(18px,24px,#b00a0a);
                             text-align: center;
                             color: #b00a0a;
-                            margin-top: getVW(28);
+                            margin-top: 25px;
                         }
                         img{
                             float: right;
+                            &.prize1{
+                                width: 309px;
+                                height: 134px;
+                            }
                             &.prize2{
-                                width: getVW(164);
-                                height: getVW(203);
+                                width: 164px;
+                                height: 203px;
+                                margin-top: 30px;
                             }
                             &.prize3{
-                                width: getVW(141);
-                                height: getVW(238);
+                                width: 141px;
+                                height: 238px;
                             }
                             &.prize4{
-                                width: getVW(142);
-                                height: getVW(67);
+                                width: 160px;
+                                height: 75px;
+                                margin-top: -15px;
                             }
                         }
                     }

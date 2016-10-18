@@ -12,66 +12,68 @@
                     //width:478
                     .des{
                         @include r;
-                        height: getVW(41);
-                        margin-bottom: getVW(25);
+                        margin-top: 15px;
+                        margin-bottom: 14px;
+                        height: 34px;
                         background-image: url(../images/inquire_des.png);
-                        background-repeat: no-repeat;
                         background-size: contain;
+                        background-repeat: no-repeat;
                         background-position: center center;
+                        z-index: 1;
                     }
                     .box{
                         @include r;
-                        margin-bottom: getVW(15);
+                        margin-bottom: 30px;
                         .st1{
                             @include r;
-                            height: getVW(61);
+                            height: 54px;
                             background-image: url(../images/inquire_st1.png);
                             background-repeat: no-repeat;
                             background-size: contain;
                             background-position: center center;
-                            margin-bottom: getVW(12);
+                            margin-bottom: 18px;
                         }
                         .prize1{
                             @include r;
-                            height: getVW(159);
+                            height: 178px;
                             background-image: url(../images/inquire_prize1.png);
                             background-repeat: no-repeat;
                             background-size: contain;
                             background-position: center center;
-                            margin-bottom: getVW(15);
+                            margin-bottom: 15px;
                         }
                         .word1{
                             @include r;
-                            @include fontvw(38,48,#414141,bolder);
+                            @include font(38px,48px,#414141,bolder);
                             text-align: center;
                             .num{
-                                @include fontvw(60,48,#f11a1a,bolder);
+                                @include font(60px,48px,#f11a1a,bolder);
                             }
                         }
                         .st2{
                             @include r;
-                            height: getVW(61);
+                            height: 54px;
                             background-image: url(../images/inquire_st2.png);
                             background-repeat: no-repeat;
                             background-size: contain;
                             background-position: center center;
-                            margin-bottom: getVW(12);
+                            margin-bottom: 38px;
                         }
                         .prize2{
                             @include r;
-                            height: getVW(119);
+                            height: 119px;
                             background-image: url(../images/inquire_prize2.png);
                             background-repeat: no-repeat;
                             background-size: contain;
                             background-position: center center;
-                            margin-bottom: getVW(15);
+                            margin-bottom: 15px;
                         }
                         .word2{
                             @include r;
-                            @include fontvw(38,48,#414141,bolder);
+                            @include font(38px,48px,#414141,bolder);
                             text-align: center;
                             .num{
-                                @include fontvw(60,48,#f11a1a,bolder);
+                                @include font(60px,48px,#f11a1a,bolder);
                             }
                         }
                     }

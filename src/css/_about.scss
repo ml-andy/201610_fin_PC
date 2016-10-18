@@ -12,73 +12,75 @@
                     //width:478
                     .st1{
                         @include r;
-                        height: getVW(61);
+                        height: 54px;
                         background-image: url(../images/about_st1.png);
                         background-repeat: no-repeat;
                         background-size: contain;
                         background-position: center center;
-                        margin-bottom: getVW(24);
+                        margin-bottom: 20px;
                     }
                     .st2{
                         @include r;
-                        height: getVW(61);
+                        height: 54px;
                         background-image: url(../images/about_st2.png);
                         background-repeat: no-repeat;
                         background-size: contain;
                         background-position: center center;
-                        margin-bottom: getVW(24);
-                        margin-top: getVW(20);
+                        margin-bottom: 20px;
+                        margin-top: 10px;
                     }
                     .st3{
                         @include r;
-                        height: getVW(61);
+                        height: 54px;
                         background-image: url(../images/about_st3.png);
                         background-repeat: no-repeat;
                         background-size: contain;
                         background-position: center center;
-                        margin-bottom: getVW(24);
+                        margin-bottom: 20px;
+                        margin-top: 10px;
                     }
                     .st4{
                         @include r;
-                        height: getVW(61);
+                        height: 54px;
                         background-image: url(../images/about_st4.png);
                         background-repeat: no-repeat;
                         background-size: contain;
                         background-position: center center;
-                        margin-bottom: getVW(24);
+                        margin-bottom: 25px;
+                        margin-top: 10px;
                     }
                     .w{
                         @include r;
-                        @include fontvw(25,32,#414141);
-                        margin-bottom: getVW(10);
+                        @include font(17px,24px,#414141);
+                        margin-bottom: 10px;
                     }
                     .ss{
                         @include r;
-                        @include fontvw(18,24,#7b7b7b);
-                        margin-bottom: getVW(15);
+                        @include font(17px,24px,#7b7b7b);
+                        margin-bottom: 15px;
                     }
                     .org{
                         @include r;
-                        @include fontvw(30,32,#f5791f,bolder);
+                        @include font(24px,24px,#f5791f,bolder);
                     }
                     .blue{
                         @include r;
-                        @include fontvw(30,32,#116fee,bolder);
+                        @include font(24px,24px,#116fee,bolder);
                     }
                     .red{
                         @include r;
-                        @include fontvw(25,32,#de1818);
+                        @include font(17px,24px,#de1818);
                     }
                     .sst{
                         @include r;
-                        @include fontvw(30,32,#414141,bolder);
-                        margin-bottom: getVW(10);
+                        @include font(24px,32px,#414141,bolder);
+                        margin-bottom: 10px;
                     }
                     .word{
                         @include r;
-                        @include fontvw(25,32,#414141);
+                        @include font(17px,24px,#414141);
                         box-sizing: border-box;
-                        padding-left: getVW(13);
+                        padding-left: 25px;
                     }
                 }
             }

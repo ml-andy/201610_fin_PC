@@ -11,60 +11,71 @@
                 .content{
                     .des{
                         @include r;
-                        height: getVW(88);
+                        margin-bottom: 14px;
+                        height: 57px;
                         background-image: url(../images/login_member_nodata_confirm_des.png);
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center center;
-                        margin-bottom: getVW(20);
+                        z-index: 1;
                     }
                     .data{
                         @include r;
                         box-sizing: border-box;
-                        border: getVW(3) dotted #fff;
-                        padding: getVW(20) 0;
-                        margin-bottom: getVW(25);
+                        border: 3px dotted #fff;
+                        padding: 20px 0;
+                        margin-bottom: 25px;
+                        z-index: 1;
                         li{
                             @include r;
-                            margin-bottom: getVW(15);
                             .left{
-                                @include altvw(166,30);
-                                @include fontvw(25,30,#414141);
+                                @include alt(110px,30px);
+                                @include font(17px,30px,#414141);
                                 text-align: right;
                             }
                             .right{
                                 @include r;
-                                @include fontvw(25,30,#1c56ac);
+                                @include font(17px,30px,#1c56ac);
                                 box-sizing: border-box;
-                                padding-left: getVW(180);
+                                padding-left: 120px;
                             }
                         }
                     }
                     .btn{
                         @include r;
-                        width: getVW(285);
-                        margin-left: getVW(96);
+                        text-align: center;
+                        z-index: 1;
                         .modify{
-                            @include r;
-                            height: getVW(108);
-                            margin-bottom: getVW(22);
+                            position: relative;
+                            width: 218px;
+                            height: 83px;
+                            margin-right: 15px;
+                            display: inline-block;
                             background-image: url(../images/login_member_nodata_confirm_btn1.png);
                             background-size: contain;
                             background-repeat: no-repeat;
                             background-position: center center;
                             cursor: pointer;
+                            &:hover{
+                                opacity: 0.9;
+                            }
                             a{
                                 @include alt;
                             }
                         }
                         .submit{
-                            @include r;
-                            height: getVW(108);
+                            position: relative;
+                            width: 218px;
+                            height: 83px;
                             background-image: url(../images/login_member_go_btn.png);
                             background-size: contain;
                             background-repeat: no-repeat;
                             background-position: center center;
                             cursor: pointer;
+                            display: inline-block;
+                            &:hover{
+                                opacity: 0.9;
+                            }
                             a{
                                 @include alt;
                             }

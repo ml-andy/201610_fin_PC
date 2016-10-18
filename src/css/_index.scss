@@ -3,16 +3,15 @@
     .page{
         &.index{
             .title{
-                @include altvw(554,404,50,110,-277);
-                left: 50%;
+                @include alt(518px,302px,194px,114px);
                 background-image: url(../images/index_title.png);
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
+                z-index: 2;
             }
             .waterchild{
-                @include altvw(326,432,50,502,-7);
-                left: 50%;
+                @include art(284px,360px,2px,283px);
                 background-image: url(../images/index_waterchild.png);
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -20,41 +19,44 @@
                 z-index: 0;
             }
             .banner_box{
-                @include altvw(357,444,18,490);
+                @include r(598px,268px);
+                background-image: url(../images/index_pic1.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+                margin-top: 376px;
+                margin-left: 152px;
+                margin-bottom: 30px;
                 z-index: 1;
-                .banner{
-                    @include alt;
-                    background-size: 100% auto;
+                .login_number_btn{
+                    @include alt(160px,57px,60px,186px);
+                    background-image: url(../images/index_btn1.png);
+                    background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center center;
-                    opacity: 0;
-                    transform: translateX(10%);
-                    transition: 0.5s;
-                    z-index: 0;
-                    &.on{
-                        opacity: 1;
-                        z-index: 1;
-                        transform: translateX(0);
+                    cursor: pointer;
+                    z-index: 2;
+                    &:hover{
+                        opacity: 0.9;
+                    }
+                }
+                .gamePlay_btn{
+                    @include alt(252px,57px,315px,186px);
+                    background-image: url(../images/index_btn2.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    cursor: pointer;
+                    z-index: 2;
+                    &:hover{
+                        opacity: 0.9;
                     }
                 }
             }
-            .gamePlay_btn{
-                @include rvw(486,108);
-                margin-left: getVW(80);
-                margin-bottom: getVW(20);
-                margin-top: getVW(976);
-                background-image: url(../images/index_playgame_btn.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                cursor: pointer;
-                z-index: 2;
-            }
             .footer{
-                @include r;
-                @include fontvw(12,28,#000000);
+                @include art(auto,auto,0,645px);
+                @include font(12px,24px,#0e0e0e);
                 text-align: center;
-                margin-bottom: getVW(10);
             }
         }
     }

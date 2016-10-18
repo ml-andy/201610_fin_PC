@@ -9,17 +9,22 @@
             }
             .com_main{
                 .content{
+                    box-sizing: border-box;
+                    padding-left: 233px;
                     .btn{
-                        @include r;
-                        margin-bottom: getVW(20);
+                        @include alt(170px,auto,36px,50px);
+                        z-index: 2;
                         .nodata_btn{
-                            @include rvw(229,87);
-                            margin-right: getVW(16);
+                            @include r(170px,65px);
+                            margin-bottom: 10px;
                             background-image: url(../images/login_member_nodata_btn1.png);
                             background-size: contain;
                             background-repeat: no-repeat;
                             background-position: center center;
                             cursor: pointer;
+                            &:hover{
+                                opacity: 0.9;
+                            }
                             &.on{
                                 background-image: url(../images/login_member_nodata_btn2.png);
                             }
@@ -28,12 +33,15 @@
                             }
                         }
                         .hasdata_btn{
-                            @include rvw(229,87);
+                             @include r(170px,65px);
                             background-image: url(../images/login_member_hasdata_btn1.png);
                             background-size: contain;
                             background-repeat: no-repeat;
                             background-position: center center;
                             cursor: pointer;
+                            &:hover{
+                                opacity: 0.9;
+                            }
                             &.on{
                                 background-image: url(../images/login_member_hasdata_btn2.png);
                             }
@@ -44,47 +52,55 @@
                     }
                     .des{
                         @include r;
-                        margin-bottom: getVW(20);
-                        height: getVW(85);
+                        margin-bottom: 14px;
+                        height: 67px;
                         background-image: url(../images/login_member_des.png);
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center center;
+                        z-index: 1;
                     }
                     .data{
                         @include r;
+                        z-index: 1;
                         li{
                             @include r;
-                            margin-bottom: getVW(17);
+                            margin-bottom: 7px;
                             &:last-child{
                                 margin-bottom: 0;
                             }
                             input{
-                                @include r;
-                                @include fontvw(25,66,#414141);
-                                text-indent: getVW(20);
-                                height: getVW(66);
+                                @include r(100%,40px);
+                                @include font(14px,40px,#414141);
+                                text-indent: 8px;
                                 background-color: #fff;
                                 &.vercode{
-                                    width: getVW(264);
-                                    margin-right: getVW(15);
+                                    width: 178px;
+                                    margin-right: 10px;
                                 }
-                                &.on{
+                                &.error{
                                     color: red;
                                 }
                             }
                             .vercode_img{
-                                @include rvw(170,50);
-                                margin-top: getVW(8);
+                                @include r(134px,39px);
                             }
                             .submitbtn{
-                                @include rvw(285,108);
+                                @include r(218px,83px);
                                 background-image: url(../images/login_member_go_btn.png);
                                 background-size: contain;
                                 background-repeat: no-repeat;
                                 background-position: center center;
-                                margin-left: getVW(96);
+                                margin-left: 75px;
+                                margin-top: 15px;
                                 text-indent: -99999px;
+                                cursor: pointer;
+                                &:hover{
+                                    opacity: 0.9;
+                                }
+                                a{
+                                    @include alt;
+                                }
                             }
                         }
                     }

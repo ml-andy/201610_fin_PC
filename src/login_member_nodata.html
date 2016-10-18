@@ -31,21 +31,25 @@
   </div>
   <div class="header">
     <div class="logo"></div>
-    <div class="menubtn"></div>
+    <div class="org_header">
+      <div class="news">
+        <img src="images/org_header_news.png">
+      </div>
+      <img src="images/org_header.png">
+    </div>
   </div>
   <div class="menu">
     <div class="menua_box">
-      <a href="javascript:;" class="menua m1">登入/出帳號</a>
-      <a href="javascript:;" class="menua m2">查詢紀錄</a>
-      <a href="javascript:;" class="menua m3">活動辦法</a>
-      <a href="javascript:;" class="menua m4">獎項介紹</a>
-      <a href="javascript:;" class="menua m5">得獎名單</a>
-      <a href="javascript:;" class="menua m6">FB分享</a>
-      <a href="javascript:;" class="menua m7">玩遊戲</a>
-      <a href="javascript:;" class="menua m8">登錄序號</a>
-      <a href="javascript:;" class="menua m9">回首頁</a>
+      <a href="javascript:;" class="menua m1">查詢紀錄</a>
+      <a href="javascript:;" class="menua m2">活動辦法</a>
+      <a href="javascript:;" class="menua m3">獎項介紹</a>
+      <a href="javascript:;" class="menua m4">得獎名單</a>
+      <a href="javascript:;" class="menua m5">FB分享</a>
+      <a href="javascript:;" class="menua m6">登入/出帳號</a>
+      <a href="javascript:;" class="menua m7">回首頁</a>
+      <a href="javascript:;" class="menua m8">玩遊戲</a>
+      <a href="javascript:;" class="menua m9">登錄序號</a>
     </div>
-    <div class="cover"></div>
   </div>
   <div class="wrapper">
      <div class="page login_member_nodata">
@@ -59,12 +63,31 @@
                    <div class="hasdata_btn">
                        <a href="login_member.html"></a>
                    </div>
+                   <div class="s_des">
+                       <div class="t">--------貼心提醒--------</div>
+                       <ul>
+                           <li>
+                               <div class="lt">1</div>
+                               <div class="rt">
+                                   沒有手機可填家人的手機號碼，以利中獎連繫
+                               </div>
+                           </li>
+                           <li>
+                               <div class="lt">2</div>
+                               <div class="rt">
+                                   收件地址需填寫可連絡本人，以利中獎後聯繫
+                               </div>
+                           </li>
+                       </ul>
+                   </div>
                </div>
                <ul class="data">
                    <li><input type="text" class="name" placeholder="請填寫正確中文姓名"></li>
                    <li><input type="text" class="idcard" placeholder="請填寫身分證字號 (英文字母請大寫)"></li>
-                   <li><input type="text" class="phone" placeholder="請輸入您的聯絡手機號碼"></li>
-                   <li><input type="text" class="email" placeholder="請輸入您的電子信箱"></li>
+                   <li>
+                       <input type="text" class="email" placeholder="請輸入您的電子信箱">
+                       <input type="text" class="phone" placeholder="請輸入您的聯絡手機號碼">
+                   </li>
                    <li>
                        <select class="male">
                            <option value="請選擇性別">請選擇性別</option>
@@ -83,12 +106,6 @@
                    </li>
                    <li><input type="text" class="addr" placeholder="請輸入您的通訊地址"></li>
                    <li>
-                       <div class="s">
-                           1.沒有手機可填家人的手機號碼，以利中獎聯繫<br>
-                           2.收件地址需填寫可連絡本人，以利中獎後聯繫
-                       </div>
-                   </li>
-                   <li>
                        <div class="agree">
                            <div class="checkbox"></div>
                            <a href="about.html" target="blank">
@@ -103,6 +120,13 @@
            </div>
        </div>
      </div>
+  </div>
+
+  <!-- popup -->
+  <div class="qrcode_popup">
+    <div class="closebtn close"></div>
+    <div class="main"></div>
+    <div class="cover close"></div>
   </div>
 </body>
 </html>

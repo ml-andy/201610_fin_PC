@@ -21,27 +21,26 @@ class VerPopup {
         this.bottle1W = this.bottle1.width();
         this.bottle2W = this.bottle2.width();
         
-        this.bottle1.on('touchstart',function(){
+        this.bottle1.on('mousedown',function(){
             this.og_left = this.bottle1.offset().left;
             this.og_right = this.bottle2.offset().left;
             this.goal = this.og_right - this.og_left + this.bottle2W/2 - this.bottle1W/2;
             console.log(this.og_left);
-            this.bottle1.bind('touchmove', this.bottle1touchmove.bind(this));
+            this.bottle1.bind('mousemove', this.bottle1touchmove.bind(this));
         }.bind(this));
         
-        this.main.on('touchend',function(){
-            this.bottle1.unbind('touchmove', this.bottle1touchmove.bind(this));
+        this.main.on('mouseup',function(){
+            this.bottle1.unbind('mousemove', this.bottle1touchmove.bind(this));
             this.bottle1.attr('style','');
         }.bind(this));
     }
     bottle1touchmove(e){
-        e = e.originalEvent.touches[0];
-
+        // e = e.originalEvent.touches[0];
         this.drag_left = e.pageX - this.og_left - this.bottle1W / 2;
         if(this.drag_left<0) this.drag_left=0;
         else if(this.drag_left >= this.goal){
             this.showverPopup(false);
-            this.bottle1.unbind('touchmove', this.bottle1touchmove.bind(this));
+            this.bottle1.unbind('mousemove', this.bottle1touchmove.bind(this));
             return;
         }
 

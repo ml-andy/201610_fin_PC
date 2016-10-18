@@ -7,13 +7,13 @@
         this.sharefb = this.page.find('.sharefb');
 
         this.more.on('click',function(){
-            this.HeaderModel.menuaClick('m8');
-        }.bind(this));
-        this.back.on('click',function(){
             this.HeaderModel.menuaClick('m9');
         }.bind(this));
+        this.back.on('click',function(){
+            this.HeaderModel.menuaClick('m7');
+        }.bind(this));
         this.sharefb.on('click',function(){
-            this.HeaderModel.menuaClick('m6');
+            this.HeaderModel.menuaClick('m5');
         }.bind(this));
     }
 }

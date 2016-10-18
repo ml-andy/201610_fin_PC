@@ -10,150 +10,107 @@ body{
     background-color: rgba(0,0,0,0.8);
     .main{
         @include am(auto,auto);
-        @include fontvw(28,36,#fff);
-        letter-spacing: getVW(4);
+        @include font(28px,36px,#fff);
+        letter-spacing: 4px;
         text-align: center;
     }
 }
 .header{
-    @include flt;
-    height: getVW(100);
+    @include alt(1000px,104px,50%,0,-500px);
     z-index: 9;
     .logo{
-        @include altvw(126,100);
+        @include alt(107px,91px,8px,13px);
         background-image: url(../images/logo.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
     }
-    .menubtn{
-        @include artvw(105,95);
-        background-image: url(../images/menubtn_open.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-        &:before{
-            content:"";
-            @include alt;
-            background-image: url(../images/menubtn_close.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center center;
-            opacity: 0;
-        }
-        &.on{
-            &:before{
-                opacity: 1;
-            }
+    .org_header{
+        @include flt(823px,114px,50%,0,-315px);
+        z-index: 10;
+        .news{
+            @include art(137px,130px,8px,60px);
+            z-index: 1;
         }
     }
 }
 .menu{
-    @include flt;
-    z-index: 0;
-    opacity: 0;
-    &.on{
-        z-index: 8;
-        opacity: 1;
-    }
+    @include alt(68px,auto,50%,113px,-480px);
+    z-index: 8;
     .menua_box{
-        @include am;
-        width: getVW(590);
-        height: auto;
-        min-height: getVW(640);
-        z-index: 1;
+        @include r;
         .menua{
-            @include rvw(183,183);
-            margin-right: getVW(20);
-            margin-bottom: getVW(40);
-            background-image: url(../images/menubg_yellow.png);
-            background-size: contain;
+            @include r(68px,73px);
+            margin-bottom: 6px;
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: center 0;
             cursor: pointer;
             text-indent: -9999px;
-            &:nth-child(3n){
-                margin-right: 0;
-            }
             &:before{
-                @include alt;
                 content:"";
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
+                @include alt;
+                background-image: inherit;
+                background-position: center -73px;
+                // transition: 0.3s;
+                opacity: 0;
+            }
+            &:hover{
+                &:before{
+                    opacity: 1;
+                }
             }
             &.m1{
-                &:before{
-                    background-image: url(../images/menu_1.png);
-                }
+                background-image: url(../images/menu_1.png);                
             }
             &.m2{
-                &:before{
-                    background-image: url(../images/menu_2.png);
-                }
+                background-image: url(../images/menu_2.png);                
             }
             &.m3{
-                &:before{
-                    background-image: url(../images/menu_3.png);
-                }
+                background-image: url(../images/menu_3.png);                
             }
             &.m4{
-                &:before{
-                    background-image: url(../images/menu_4.png);
-                }
+                background-image: url(../images/menu_4.png);                
             }
             &.m5{
-                &:before{
-                    background-image: url(../images/menu_5.png);
-                }
+                background-image: url(../images/menu_5.png);                
             }
             &.m6{
-                &:before{
-                    background-image: url(../images/menu_6.png);
-                }
+                background-image: url(../images/menu_6.png);                
             }
             &.m7{
-                background-image: url(../images/menubg_blue.png);
-                &:before{
-                    background-image: url(../images/menu_7.png);
-                }
+                background-image: url(../images/menu_7.png);                
             }
             &.m8{
-                background-image: url(../images/menubg_red.png);
-                &:before{
-                    background-image: url(../images/menu_8.png);
-                }
+                @include alt(68px,73px,100%,0,8px);
+                background-image: url(../images/menu_8.png);                
             }
             &.m9{
-                &:before{
-                    background-image: url(../images/menu_9.png);
-                }
+                @include alt(68px,73px,100%,79px,8px);
+                background-image: url(../images/menu_9.png);                
             }
             
         }
     }
     .cover{
-        @include alt;
-        z-index: 0;
-        background-color: rgba(0,0,0,0.8);
+        display: none;
     }
 }
 .wrapper{
     @include r;
-    background-image: url(../images/index_bg.png);
-    background-size: 100% auto;
+    background-image: url(../images/index_bg.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     min-height: 100%;
     z-index: 1;
-    background-color: #67b80c;
+    background-color: #6aba0d;
     .page{
-        @include r;
-        min-height: 100%;
+        position: relative;
+        max-width: 1000px;
+        margin: auto;
         .com_title{
-            @include rvw(100,493);
-            width: 100%;
-            margin-top: getVW(20);
+            @include r(319px,161px);
+            margin-top: 115px;
+            margin-left: 366px;
             background-image: url(../images/all_title_bg.png);
             background-size: auto 100%;
             background-repeat: no-repeat;
@@ -161,26 +118,24 @@ body{
             z-index: 1;
             &:before{
                 content:'';
-                @include altvw(100,110,0,262);
-                width: 100%;
+                @include alt;
                 background-size: auto 100%;
                 background-repeat: no-repeat;
                 background-position: center center;
             }
         }
         .com_main{
-            @include r;
-            width: getVW(534);
-            margin-top: getVW(-26);
-            margin-left: getVW(53);
-            margin-bottom: getVW(28);
+            @include r(633px);
             z-index: 0;
             box-sizing: border-box;
-            padding: getVW(34) 0;
+            margin-top: -160px;
+            margin-left: 210px;
+            margin-bottom: 25px;
+            padding: 137px 0 34px 0;
             &:before{
                 content:"";
                 @include alt;
-                height: getVW(34);
+                height: 137px;
                 background-image: url(../images/login_member_main_bg_top.png);
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
@@ -189,7 +144,7 @@ body{
             &:after{
                 content:"";
                 @include alb;
-                height: getVW(34);
+                height: 34px;
                 background-image: url(../images/login_member_main_bg_bot.png);
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
@@ -201,9 +156,47 @@ body{
                 background-size: 100% auto;
                 background-position: center top;
                 box-sizing: border-box;
-                padding: 0 getVW(28);
+                padding: 0 36px;
+                padding-top: 23px;
+                &:after{
+                    content:"";
+                    @include arb(229px,297px,-154px,-46px);
+                    background-image: url(../images/com_waterchild.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center center;
+                    z-index: 0;
+                }
             }
         }
+    }
+}
+
+.qrcode_popup{
+    @include flt;
+    z-index: 99;
+    display: none;
+    .closebtn{
+        @include alt(95px,74px,50%,0,404px);
+        background-image: url(../images/index_popup_closebtn.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .main{
+        @include am(692px,620px);
+        background-image: url(../images/index_popup_qrcode.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        z-index: 1;
+    }
+    .cover{
+        @include alt;
+        background-color: rgba(0,0,0,0.8);
+        z-index: 0;
     }
 }
 
