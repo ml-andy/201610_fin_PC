@@ -3,10 +3,11 @@
         this.HeaderModel = new HeaderModel();
         this.verPopup = new VerPopup($('.verPopup'));
         this.page = $('.page.login_number');
+        
         this.submit = this.page.find('.submit');
-        this.submit.on('click',function(){
-            this.verPopup.showverPopup(true);
-        }.bind(this));
+        // this.submit.on('click',function(){
+        //     this.verPopup.showverPopup(true);
+        // }.bind(this));
     }
 }
 class VerPopup {
@@ -20,6 +21,7 @@ class VerPopup {
         this.og_right = this.bottle2.offset().left;
         this.bottle1W = this.bottle1.width();
         this.bottle2W = this.bottle2.width();
+        this.Login_number_sned = 0;
         
         this.bottle1.on('mousedown',function(){
             this.og_left = this.bottle1.offset().left;
@@ -50,7 +52,18 @@ class VerPopup {
         if(_t) this.verPopup.fadeIn();
         else{
              this.verPopup.fadeOut();
-             window.location.href="login_number_success.html";
+            //  window.location.href="login_number_success.html";
+            
+            if (this.Login_number_sned == 0) {
+                var options = {
+                    type: 'post', 
+                    url: '/inc/sn.php',
+                    success: showCartResponse
+                };
+
+                $('.form-sn').ajaxSubmit(options);
+                this.Login_number_sned = 1;
+            }
         }
     }
 }

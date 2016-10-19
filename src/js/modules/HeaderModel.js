@@ -32,7 +32,7 @@
     menuaClick(menulink){
         switch (menulink) {
             case 'm1':
-                window.location.href="inquire.html";
+                window.location.href="inquire.php";
                 break;
             case 'm2':
                 window.location.href="about.html";
@@ -47,16 +47,17 @@
                 console.log('share fb');
                 break;
             case 'm6':
-                window.location.href="login_member.html";
+                window.location.href="login_member.php";
                 break;
             case 'm7':
                 window.location.href="index.html";
                 break;
             case 'm8':
-                this.show_qrcode_popup(true);
+                // this.show_qrcode_popup(true);
+                alert('遊戲將於11/2正式上線');
                 break;
             case 'm9':
-                window.location.href="login_number.html";
+                window.location.href="login_number.php";
                 break;
         }
     }
