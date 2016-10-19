@@ -7,6 +7,9 @@
 		}.bind(this));
 	}
 	ready() {
+		if(!device.desktop()) window.location.href = window.location.origin + '/m' + window.location.pathname + window.location.search + window.location.hash;
+		// console.log( window.location.replace("/m/" + window.location.search + window.location.hash));
+
 		this.page = $('.page');
 
 		switch (this.page.attr('class').split('page ')[1]) {
