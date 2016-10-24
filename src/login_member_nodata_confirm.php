@@ -1,3 +1,29 @@
+<?
+    //------------------------------------------------------------
+    //檢查是否已登入
+    //------------------------------------------------------------
+    if (isset($_COOKIE['uid'])) {
+        if ($_COOKIE['uid'] != "") header("Location: login_number.php");
+    }
+
+
+    //------------------------------------------------------------
+    //已填寫的資料
+    //------------------------------------------------------------
+	$name = $_COOKIE['name'];
+	$ident = $_COOKIE['ident'];
+	$email = $_COOKIE['email'];
+	$phone = $_COOKIE['phone'];
+	$gender = $_COOKIE['gender'];
+	$age = $_COOKIE['age'];
+	$zip = $_COOKIE['zip'];
+	$city = $_COOKIE['city'];
+	$state = $_COOKIE['state'];
+	$street = $_COOKIE['street'];
+
+    $genderList = array("m"=>"男", "f"=>"女");
+    $ageList = array("14歲以下", "15-19歲", "20-24歲", "25-29歲", "30-34歲", "35-39歲", "40歲以上");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +50,8 @@
 <script src="lib/device.min.js"></script>
 <script src="js/google_ga.js"></script>
 <script src="js/app.js"></script>
+<script src="/js/jquery.ajaxform.js"></script>
+<script src="/js/index.js"></script>
 </head>
 <body>
   <div class="loading">
@@ -48,14 +76,49 @@
     </div>
   </div>
   <div class="wrapper">
-     <div class="page index">
-       <div class="title"></div>
-       <div class="waterchild"></div>
-       <div class="banner_box">
-         <div class="login_number_btn"></div>
-         <div class="gamePlay_btn"></div>
+     <div class="page login_member_nodata_confirm">
+       <div class="com_title"></div>
+       <div class="com_main">
+           <form class="form-confirm">
+           <div class="content">
+               <div class="des"></div>
+               <ul class="data">
+                 <li>
+                   <div class="left">姓名 :</div>
+                   <div class="right"><?=$name?></div>
+                 </li>
+                 <li>
+                   <div class="left">身分證字號 :</div>
+                   <div class="right"><?=$ident?></div>
+                 </li>
+                 <li>
+                   <div class="left">手機 :</div>
+                   <div class="right"><?=$phone?></div>
+                 </li>
+                 <li>
+                   <div class="left">E-mail :</div>
+                   <div class="right"><?=$email?></div>
+                 </li>
+                 <li>
+                   <div class="left">性別 :</div>
+                   <div class="right"><?=$genderList[$gender]?></div>
+                 </li>
+                 <li>
+                   <div class="left">年齡 :</div>
+                   <div class="right"><?=$ageList[$age]?></div>
+                 </li>
+                 <li>
+                   <div class="left">地址 :</div>
+                   <div class="right"><?=$city . $state . $street?></div>
+                 </li>
+               </ul>
+               <div class="btn">
+                 <div class="modify"></div>
+                 <div class="submit"></div>
+               </div>
+           </div>
+           </form>
        </div>
-       <div class="footer">使用桌上型電腦瀏覽，建議使用Chrome及IE10以上瀏覽器，以獲最佳瀏覽效果</div>
      </div>
   </div>
 

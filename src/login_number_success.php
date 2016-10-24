@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>標題</title>
+<title>FIN x GARMIN 全民運動會</title>
 <meta charset="UTF-8">
 <meta lang="tw">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
  <meta name="viewport" content="width=device-width,user-scalable=no"> 
-<meta name="description" content="說明"/>
-<meta name="keywords" content="關鍵字"/>
-<meta property="og:title" content="標題"/>
+<meta name="description" content="你也有機會成為奧拚的潛力新星嗎？快參加FIN的《全民拚動會》，完成拙戲就有機會最新iPhone7；登錄發票序號還有機會抽SONY PS4和PS VR，Let’s Play！"/>
+<meta name="keywords" content="FIN x GARMIN 全民運動會"/>
+<meta property="og:title" content="原來只要做點輕拚動，就能獲得iPhone7？"/>
 <meta property="og:type" content="website"/>    
- <meta property="og:image" content="images/fbsc.jpg"/> 
-<meta property="og:site_name" content="標題"/>
-<meta property="og:description" content="說明"/>
+<meta property="og:url" content="http://www.heysong-fin.com.tw/fin2016_q4"/>
+ <meta property="og:image" content="http://fin2016-q4.homakimi-digital.com/images/fb.jpg"/> 
+<meta property="og:site_name" content="FIN x GARMIN 全民運動會"/>
+<meta property="og:description" content="你也有機會成為奧拚的潛力新星嗎？快參加FIN的《全民拚動會》，完成拙戲就有機會最新iPhone7；登錄發票序號還有機會抽SONY PS4和PS VR，Let’s Play！"/>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 <!---->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -21,6 +22,7 @@
 <!--js-->
 <script type="text/javascript" src="//connect.facebook.net/zh_TW/all.js"></script>
 <script src="lib/device.min.js"></script>
+<script src="js/google_ga.js"></script>
 <script src="js/app.js"></script>
 </head>
 <body>
@@ -31,12 +33,6 @@
   </div>
   <div class="header">
     <div class="logo"></div>
-    <div class="org_header">
-      <div class="news">
-        <img src="images/org_header_news.png">
-      </div>
-      <img src="images/org_header.png">
-    </div>
   </div>
   <div class="menu">
     <div class="menua_box">
@@ -52,36 +48,14 @@
     </div>
   </div>
   <div class="wrapper">
-     <div class="page login_member_nodata_confirm">
+     <div class="page login_number_success">
        <div class="com_title"></div>
        <div class="com_main">
            <div class="content">
                <div class="des"></div>
-               <ul class="data">
-                 <li>
-                   <div class="left">姓名 :</div>
-                   <div class="right">陳婉君</div>
-                 </li>
-                 <li>
-                   <div class="left">身分證字號 :</div>
-                   <div class="right">F0123456789</div>
-                 </li>
-                 <li>
-                   <div class="left">手機 :</div>
-                   <div class="right">0912345678</div>
-                 </li>
-                 <li>
-                   <div class="left">E-mail :</div>
-                   <div class="right">user@homakimi.com</div>
-                 </li>
-                 <li>
-                   <div class="left">地址 :</div>
-                   <div class="right">台北市中山區中正路1號</div>
-                 </li>
-               </ul>
                <div class="btn">
-                 <div class="modify"></div>
-                 <div class="submit"></div>
+                   <div class="more"></div>
+                   <div class="sharefb"></div>
                </div>
            </div>
        </div>

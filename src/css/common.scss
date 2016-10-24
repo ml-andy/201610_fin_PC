@@ -75,7 +75,10 @@ body{
                 background-image: url(../images/menu_5.png);                
             }
             &.m6{
-                background-image: url(../images/menu_6.png);                
+                background-image: url(../images/menu_6_1.png); 
+                &.on{
+                    background-image: url(../images/menu_6.png);
+                }               
             }
             &.m7{
                 background-image: url(../images/menu_7.png);                
