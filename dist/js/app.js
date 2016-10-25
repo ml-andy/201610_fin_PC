@@ -137,7 +137,7 @@ var HeaderModel = function () {
 
         this.menua = this.menu.find('.menua');
         this.menua.on('click', function (e) {
-            this.menuaClick($(e.currentTarget).attr('class').split('menua ')[1],0);
+            this.menuaClick($(e.currentTarget).attr('class').replace('on','').split('menua ')[1].replace(' ',''),0);
         }.bind(this));
 
         this.qrcode = $('.qrcode_popup');
