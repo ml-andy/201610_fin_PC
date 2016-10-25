@@ -9,10 +9,15 @@ body{
     z-index: 99;
     background-color: rgba(0,0,0,0.8);
     .main{
-        @include am(auto,auto);
+        @include am(60px,60px);
         @include font(28px,36px,#fff);
         letter-spacing: 4px;
         text-align: center;
+        text-indent: -99999px;
+        background-image: url(../images/spin.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
     }
 }
 .header{
