@@ -121,7 +121,7 @@ var HeaderModel = function () {
 
         FB.init({
             appId      : '1259657327430006',
-            channelUrl : 'http://demo.fin2016-q4.homakimi-digital.com/',
+            channelUrl : 'http://www.heysong-fin.com.tw/fin2016_q4/',
             status     : true,
             xfbml      : true,
             cookie     : true
@@ -168,15 +168,16 @@ var HeaderModel = function () {
                     break;
                 case 'm2':
                     setTrackButton('btn_rule');
-                    window.location.href = "about.html";
+                    window.location.href = "about.php";
                     break;
                 case 'm3':
                     setTrackButton('btn_prize');
-                    window.location.href = "award_info.html";
+                    window.location.href = "award_info.php";
                     break;
                 case 'm4':
                     setTrackButton('btn_winner');
-                    window.location.href = "award_list.php";
+                    alert('於105/11/16(三)公佈');
+                    //window.location.href = "award_list.php";
                     break;
                 case 'm5':
                     if (fr == 0) setTrackButton('btn_share_fb');
@@ -199,7 +200,7 @@ var HeaderModel = function () {
                     break;
                 case 'm7':
                     setTrackButton('btn_index');
-                    window.location.href = "index.html";
+                    window.location.href = "index.php";
                     break;
                 case 'm8':
                     if (fr == 0) setTrackButton('btn_game_menu');
