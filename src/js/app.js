@@ -18,6 +18,9 @@ var App = function () {
 	_createClass(App, [{
 		key: 'ready',
 		value: function ready() {
+
+            if(!device.desktop()) window.location.href = window.location.origin + '/m' + window.location.pathname + window.location.search + window.location.hash;
+            
 			this.page = $('.page');
 
 			switch (this.page.attr('class').split('page ')[1]) {
