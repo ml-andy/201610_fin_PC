@@ -185,7 +185,7 @@ body{
     z-index: 99;
     display: none;
     .closebtn{
-        @include alt(95px,74px,50%,0,505px);
+        @include alt(95px,74px,50%,50%,226px,-297px);
         background-image: url(../images/index_popup_closebtn.png);
         background-repeat: no-repeat;
         background-size: contain;
