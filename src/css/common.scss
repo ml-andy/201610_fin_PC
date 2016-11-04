@@ -238,3 +238,35 @@ body{
 //about
 @import "_about.scss";
 
+@media screen and (max-width: 1400px) {
+    .qrcode_popup{
+        @include flt;
+        z-index: 99;
+        display: none;
+        .closebtn{
+            @include alt(95px,9vh,50%,118px,30vh);
+            background-image: url(../images/index_popup_closebtn.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .main{
+            @include alt(692px,460px,50%);
+            height: calc(100% - 108px);
+            transform: translate(-50%,0);
+            margin-top: 108px;
+            background-image: url(../images/index_popup_qrcode.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center top;
+            z-index: 1;
+        }
+        .cover{
+            @include alt;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 0;
+        }
+    }
+}
