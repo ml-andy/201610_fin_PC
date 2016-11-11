@@ -4,22 +4,18 @@
     //------------------------------------------------------------
     include_once('include/application.php');
 
-
+    
     //------------------------------------------------------------
     //檢查是否已登入
     //------------------------------------------------------------
-    if (isset($_COOKIE['uid'])) {
-      $uid = $_COOKIE['uid'];
-        if ($uid == "") header("Location: login_member.php");
-    } else
-        header("Location: login_member.php");
+	if ($uid == "") msgReport("login_member.php?ref=inquire", "");
 
 
-  //------------------------------------------------------------
-  //設定資料庫連線
-  //------------------------------------------------------------
-  $db = new dbstuff;
-  $db->connect(DB_HOST, DB_UID, DB_PWD, DB_NAME);
+	//------------------------------------------------------------
+	//設定資料庫連線
+	//------------------------------------------------------------
+	$db = new dbstuff;
+	$db->connect(DB_HOST, DB_UID, DB_PWD, DB_NAME);
 
 
     //------------------------------------------------------------
@@ -56,6 +52,29 @@
 <script src="lib/device.min.js"></script>
 <script src="js/google_ga.js"></script>
 <script src="js/app.js"></script>
+<script src="//d17m68fovwmgxj.cloudfront.net/js/appier-track-v1.7.js"></script>
+<script>Appier.appierPVTrack("Km0z0x46tdS3hxS",0,"false","1UGfQf0j71WmU68");</script>
+<script>
+(function(){
+if (typeof window.APPIER_RETARGET == 'undefined') {
+    (function(w, d, s, m) {
+        var f = d.getElementsByTagName('script')[0],
+            j = d.createElement('script'),
+            ns = 'APPIER_RETARGET';
+        w._appierSendQueue = w._appierSendQueue || [];
+        w['appierRetargetJson'] = { id: s, site: m};
+        j.async = true;
+        j.src = '//jscdn.appier.net/aa.js?id='+m;
+        f.parentNode.insertBefore(j, f);
+        !w[ns] && (w[ns] = {});
+        (!w[ns].send) && (w[ns].send = function(j){
+            w._appierSendQueue.push(j);
+        });
+     })(window, document, 'JiOf', 'heysong-fin.com.tw');
+}
+})();
+</script>
+
 </head>
 <body>
   <div class="loading">
@@ -73,7 +92,7 @@
       <a href="javascript:;" class="menua m3">獎項介紹</a>
       <a href="javascript:;" class="menua m4">得獎名單</a>
       <a href="javascript:;" class="menua m5">FB分享</a>
-      <a href="javascript:;" class="menua m6">登入/出帳號</a>
+      <a href="javascript:;" class="menua m6 <?=($uid != "" ? "on" : "")?>">登入/出帳號</a>
       <a href="javascript:;" class="menua m7">回首頁</a>
       <a href="javascript:;" class="menua m8">玩遊戲</a>
       <a href="javascript:;" class="menua m9">登錄序號</a>

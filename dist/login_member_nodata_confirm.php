@@ -1,10 +1,14 @@
 <?
     //------------------------------------------------------------
+    //include file, default value
+    //------------------------------------------------------------
+    include_once('include/application.php');
+
+
+    //------------------------------------------------------------
     //檢查是否已登入
     //------------------------------------------------------------
-    if (isset($_COOKIE['uid'])) {
-        if ($_COOKIE['uid'] != "") header("Location: login_number.php");
-    }
+    if ($uid != "") msgReport("index.php", "");
 
 
     //------------------------------------------------------------
@@ -52,6 +56,29 @@
 <script src="js/app.js"></script>
 <script src="/js/jquery.ajaxform.js"></script>
 <script src="/js/index.js"></script>
+<script src="//d17m68fovwmgxj.cloudfront.net/js/appier-track-v1.7.js"></script>
+<script>Appier.appierPVTrack("Km0z0x46tdS3hxS",0,"false","1UGfQf0j71WmU68");</script>
+<script>
+(function(){
+if (typeof window.APPIER_RETARGET == 'undefined') {
+    (function(w, d, s, m) {
+        var f = d.getElementsByTagName('script')[0],
+            j = d.createElement('script'),
+            ns = 'APPIER_RETARGET';
+        w._appierSendQueue = w._appierSendQueue || [];
+        w['appierRetargetJson'] = { id: s, site: m};
+        j.async = true;
+        j.src = '//jscdn.appier.net/aa.js?id='+m;
+        f.parentNode.insertBefore(j, f);
+        !w[ns] && (w[ns] = {});
+        (!w[ns].send) && (w[ns].send = function(j){
+            w._appierSendQueue.push(j);
+        });
+     })(window, document, 'JiOf', 'heysong-fin.com.tw');
+}
+})();
+</script>
+
 </head>
 <body>
   <div class="loading">

@@ -8,12 +8,10 @@
 	//------------------------------------------------------------
 	//檢查是否已登入
 	//------------------------------------------------------------
-	if (isset($_COOKIE['uid'])) {
-		if ($_COOKIE['uid'] == "") header("Location: login_member.php");
-		else {
-			setcookie("uid", '', time()-3600, "/");
-			msgReport("index.html", "您已成功登出");
-		}
+	$ref = getFieldValue($_GET, 'ref');
+	if ($uid != "") {
+		setcookie("uid", '', time()-3600, "/");
+		msgReport("index.php", "您已成功登出");
 	}
 ?>
 <!DOCTYPE html>
@@ -44,6 +42,30 @@
 <script src="js/app.js"></script>
 <script src="/js/jquery.ajaxform.js"></script>
 <script src="/js/index.js"></script>
+<script src="//d17m68fovwmgxj.cloudfront.net/js/appier-track-v1.7.js"></script>
+<script>Appier.appierPVTrack("Km0z0x46tdS3hxS",0,"false","1UGfQf0j71WmU68");</script>
+<script>
+(function(){
+if (typeof window.APPIER_RETARGET == 'undefined') {
+    (function(w, d, s, m) {
+        var f = d.getElementsByTagName('script')[0],
+            j = d.createElement('script'),
+            ns = 'APPIER_RETARGET';
+        w._appierSendQueue = w._appierSendQueue || [];
+        w['appierRetargetJson'] = { id: s, site: m};
+        j.async = true;
+        j.src = '//jscdn.appier.net/aa.js?id='+m;
+        f.parentNode.insertBefore(j, f);
+        !w[ns] && (w[ns] = {});
+        (!w[ns].send) && (w[ns].send = function(j){
+            w._appierSendQueue.push(j);
+        });
+     })(window, document, 'JiOf', 'heysong-fin.com.tw');
+}
+Appier.appierTrack('EI1NQQWCGthxjdA',{unique_key:'true'},'1UGfQf0j71WmU68');
+window.APPIER_RETARGET.send({'t':'type_process','content':'login'});
+})();
+</script>
 </head>
 <body>
   <div class="loading">
@@ -72,6 +94,7 @@
        <div class="com_title"></div>
        <div class="com_main">
            <form class="form-login">
+           <input type="hidden" name="ref" value="<?=$ref?>">
            <div class="content">
                <div class="btn">
                    <div class="nodata_btn">
